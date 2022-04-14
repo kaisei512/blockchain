@@ -1,0 +1,12 @@
+import datetime as dt
+from block import *
+
+
+def next_block(last_block):
+    
+    this_index = last_block.index + 1
+    this_timestamp = dt.datetime.now()
+    this_data = f"Hey! I'm block {this_index}"
+    this_hash = last_block.hash
+    
+    return Block(this_index, this_timestamp, this_data, this_hash)
